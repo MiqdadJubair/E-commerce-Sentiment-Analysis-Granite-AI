@@ -13,16 +13,17 @@ Dataset yang digunakan dalam proyek ini adalah **"E-commerce Customer Reviews"**
 ## Wawasan dan Temuan (Insight & Findings)
 Berdasarkan analisis terhadap 100 sampel ulasan pelanggan, kami menemukan beberapa wawasan kunci:
 
-* **Distribusi Sentimen**: [Deskripsikan distribusi sentimen dari grafik Anda. Contoh: "Sebagian besar ulasan (sekitar 70%) memiliki sentimen positif, menunjukkan kepuasan umum pelanggan. Sisanya terbagi antara sentimen negatif (15%) dan campuran (15%)."]
-    [Sertakan gambar grafik distribusi sentimen Anda di sini]
+* **Distribusi Sentimen**: Mayoritas ulasan menunjukkan sentimen Positif (45%), diikuti oleh Negatif (22%), dan Campuran (21%).
+  
     ![Distribusi Sentimen](images/distribusi_sentimen_keseluruhan.png)
 
-* **Topik Paling Sering Dibahas**: [Sebutkan topik-topik teratas yang muncul dari grafik Anda. Contoh: "Topik yang paling sering dibahas meliputi 'Ukuran', 'Kualitas Bahan', 'Kesesuaian (Fit)', 'Gaya', dan 'Pengiriman'."]
-    [Sertakan gambar grafik topik teratas Anda di sini]
+* **Topik Paling Sering Dibahas**: Pelanggan paling sering membahas 'Kualitas Bahan', 'Ukuran', dan 'Kesesuaian (Fit)', menandakan prioritas mereka.
+     
     ![Topik Paling Sering Dibahas](images/topik.png)
 
-* **Sentimen per Topik**: [Jelaskan sentimen positif/negatif untuk topik-topik kunci. Contoh: "Analisis lebih dalam menunjukkan bahwa topik 'Ukuran' dan 'Kesesuaian (Fit)' memiliki proporsi sentimen negatif yang tinggi, mengindikasikan area masalah. Sebaliknya, 'Kualitas Bahan' dan 'Gaya' didominasi oleh sentimen positif, menunjukkan kekuatan produk."]
-    [Sertakan gambar grafik sentimen per topik Anda di sini]
+* **Sentimen per Topik**: 'Ukuran' dan 'Kesesuaian (Fit)' secara signifikan memicu sentimen Negatif. Ini menunjukkan area krusial untuk perbaikan.
+Sebaliknya, 'Kualitas Bahan' dan 'Gaya' sebagian besar diasosiasikan dengan sentimen Positif, mengindikasikan keunggulan produk.
+    
     ![Sentimen per Topik](images/sentimen_per_topik.png)
 
 ## Penjelasan Dukungan AI (AI Support Explanation)
@@ -31,3 +32,6 @@ Proyek ini secara ekstensif menggunakan **IBM Granite 3.2-8b-instruct** sebagai 
 * **Peran AI**: IBM Granite berfungsi sebagai inti analitis, mampu memahami konteks ulasan, mengklasifikasikan sentimen, dan mengekstrak entitas kunci (topik) tanpa memerlukan pelabelan data manual yang ekstensif atau pelatihan model kustom. Hal ini mempercepat proses analisis secara signifikan dan memungkinkan skala yang lebih besar.
 * **Teknik Prompt Engineering**: Kami menggunakan *prompt* yang dirancang dengan cermat untuk memandu model agar menghasilkan output dalam format JSON yang terstruktur. Ini memastikan hasil yang konsisten dan mudah diproses secara otomatis.
 * **Penanganan Tantangan AI**: Kami mengimplementasikan logika coba ulang (*retry logic*) dan jeda waktu (`time.sleep()`) untuk mengatasi batasan *rate limiting* dari API, serta penanganan kesalahan untuk output JSON yang tidak valid dari model. Ini memastikan proses analisis yang tangguh dan andal.
+
+## Dokumentasi Proyek Lengkap
+Untuk rincian lengkap mengenai metodologi, masalah yang dihadapi, dan solusi yang diterapkan, silakan baca [Dokumentasi Proyek Lengkap](documentation.md).
